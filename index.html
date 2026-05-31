@@ -10,21 +10,16 @@
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body {
     font-family: 'Nunito', sans-serif;
-    background: linear-gradient(160deg, #0a1f0a, #0d2b1a, #091a0d);
+    background: linear-gradient(160deg, #c8c8c8, #d8d8d8, #c0c0c0);
     min-height: 100vh;
     display: flex; flex-direction: column; align-items: center;
-    color: #fff; overflow-x: hidden; user-select: none;
+    color: #1a1a1a; overflow-x: hidden; user-select: none;
   }
   body::before {
     content: ''; position: fixed; inset: 0;
     background-image:
-      radial-gradient(1px 1px at 15% 20%, rgba(255,255,255,0.4) 0%, transparent 100%),
-      radial-gradient(1px 1px at 75% 15%, rgba(255,255,255,0.3) 0%, transparent 100%),
-      radial-gradient(1px 1px at 45% 65%, rgba(255,255,255,0.25) 0%, transparent 100%),
-      radial-gradient(1px 1px at 85% 75%, rgba(255,255,255,0.3) 0%, transparent 100%),
-      radial-gradient(2px 2px at 30% 85%, rgba(255,255,255,0.2) 0%, transparent 100%),
-      radial-gradient(60px 60px at 10% 10%, rgba(180,255,180,0.04) 0%, transparent 100%),
-      radial-gradient(80px 80px at 90% 80%, rgba(100,200,100,0.04) 0%, transparent 100%);
+      radial-gradient(600px 600px at 20% 20%, rgba(255,255,255,0.25) 0%, transparent 100%),
+      radial-gradient(400px 400px at 80% 80%, rgba(150,150,150,0.2) 0%, transparent 100%);
     pointer-events: none; z-index: 0;
   }
   .container {
@@ -37,96 +32,96 @@
   .header { width: 100%; display: flex; align-items: center; justify-content: space-between; padding-top: 8px; }
   .header h1 {
     font-family: 'Ma Shan Zheng', cursive; font-size: 1.8rem;
-    background: linear-gradient(90deg, #a8ff78, #78ffd6);
+    background: linear-gradient(90deg, #444, #222);
     -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
     letter-spacing: 2px;
   }
   .level-badge {
-    background: rgba(168,255,120,0.12); border: 1px solid rgba(168,255,120,0.35);
-    border-radius: 20px; padding: 4px 12px; font-size: 0.7rem; font-weight: 700; color: #a8ff78;
+    background: rgba(0,0,0,0.07); border: 1px solid rgba(0,0,0,0.18);
+    border-radius: 20px; padding: 4px 12px; font-size: 0.7rem; font-weight: 700; color: #333;
   }
 
   /* Stats */
   .top-stats { width: 100%; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; }
   .top-stat {
-    background: var(--card); border: 1px solid rgba(255,255,255,0.08);
-    border-radius: 14px; padding: 10px 6px; text-align: center; backdrop-filter: blur(8px);
+    background: rgba(210,210,210,0.9); border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 14px; padding: 10px 6px; text-align: center; backdrop-filter: blur(8px); box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   }
-  .top-stat .val { font-family: 'Nunito', sans-serif; font-weight: 900; font-size: 1.1rem; color: #a8ff78; }
-  .top-stat .lbl { font-size: 0.6rem; color: rgba(255,255,255,0.4); text-transform: uppercase; letter-spacing: 0.5px; margin-top: 2px; }
+  .top-stat .val { font-family: 'Nunito', sans-serif; font-weight: 900; font-size: 1.1rem; color: #222; }
+  .top-stat .lbl { font-size: 0.6rem; color: rgba(0,0,0,0.4); text-transform: uppercase; letter-spacing: 0.5px; margin-top: 2px; }
 
   /* Coins */
   .coins-display {
     display: flex; align-items: center; gap: 10px;
-    background: var(--card); border: 1px solid rgba(168,255,120,0.2);
-    border-radius: 20px; padding: 10px 28px; backdrop-filter: blur(10px);
+    background: rgba(210,210,210,0.9); border: 1px solid rgba(0,0,0,0.12);
+    border-radius: 20px; padding: 10px 28px; backdrop-filter: blur(10px); box-shadow: 0 4px 16px rgba(0,0,0,0.12);
   }
   .coin-icon { font-size: 1.8rem; animation: spin3d 5s linear infinite; }
   @keyframes spin3d { 0% { transform: rotateY(0deg); } 100% { transform: rotateY(360deg); } }
   .coins-amount {
-    font-family: 'Nunito', sans-serif; font-weight: 900; font-size: 2rem; color: #a8ff78;
-    text-shadow: 0 0 20px rgba(168,255,120,0.4); min-width: 130px; text-align: center;
+    font-family: 'Nunito', sans-serif; font-weight: 900; font-size: 2rem; color: #222;
+    text-shadow: none; min-width: 130px; text-align: center;
   }
 
   /* Progress */
   .progress-wrap {
-    width: 100%; background: rgba(255,255,255,0.06); border-radius: 10px;
-    height: 7px; overflow: hidden; border: 1px solid rgba(168,255,120,0.1);
+    width: 100%; background: rgba(0,0,0,0.1); border-radius: 10px;
+    height: 7px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08);
   }
   .progress-bar {
-    height: 100%; background: linear-gradient(90deg, #a8ff78, #78ffd6);
-    border-radius: 10px; transition: width 0.3s ease; box-shadow: 0 0 8px rgba(168,255,120,0.5);
+    height: 100%; background: linear-gradient(90deg, #555, #222);
+    border-radius: 10px; transition: width 0.3s ease; box-shadow: none;
   }
-  .progress-label { font-size: 0.65rem; color: rgba(255,255,255,0.35); text-align: right; width: 100%; margin-top: 2px; }
+  .progress-label { font-size: 0.65rem; color: rgba(0,0,0,0.4); text-align: right; width: 100%; margin-top: 2px; }
 
   /* Panda area */
   .panda-area { position: relative; width: 210px; height: 210px; cursor: pointer; }
   .panda-ring {
     position: absolute; inset: 0; border-radius: 50%;
-    border: 2px solid rgba(168,255,120,0.2); animation: ring-pulse 2.5s ease-in-out infinite;
+    border: 2px solid rgba(0,0,0,0.12); animation: ring-pulse 2.5s ease-in-out infinite;
   }
-  .panda-ring:nth-child(2) { inset: 12px; border-color: rgba(120,255,214,0.12); animation-delay: 0.7s; }
+  .panda-ring:nth-child(2) { inset: 12px; border-color: rgba(0,0,0,0.07); animation-delay: 0.7s; }
   @keyframes ring-pulse { 0%,100% { opacity:0.3; transform:scale(1); } 50% { opacity:0.8; transform:scale(1.04); } }
   .panda-btn {
     position: absolute; inset: 16px; border-radius: 50%;
     background: radial-gradient(circle at 35% 30%, #fff 0%, #e0e0e0 40%, #aaa 100%);
     border: none; cursor: pointer; display: flex; align-items: center; justify-content: center;
     font-size: 5rem;
-    box-shadow: 0 0 40px rgba(168,255,120,0.25), 0 10px 30px rgba(0,0,0,0.6), inset 0 2px 8px rgba(255,255,255,0.3);
+    box-shadow: 0 0 30px rgba(0,0,0,0.15), 0 10px 30px rgba(0,0,0,0.2), inset 0 2px 8px rgba(255,255,255,0.6);
     transition: transform 0.08s ease; outline: none; -webkit-tap-highlight-color: transparent;
   }
   .panda-btn:active { transform: scale(0.91); }
 
   /* Quote bubble */
   .quote-bubble {
-    width: 100%; background: rgba(0,0,0,0.35); border: 1px solid rgba(168,255,120,0.2);
+    width: 100%; background: rgba(210,210,210,0.9); border: 1px solid rgba(0,0,0,0.1);
     border-radius: 18px; padding: 14px 18px; backdrop-filter: blur(10px);
     min-height: 70px; display: flex; align-items: center; justify-content: center;
-    text-align: center; transition: all 0.3s ease; position: relative;
+    text-align: center; transition: all 0.3s ease; position: relative; box-shadow: 0 2px 12px rgba(0,0,0,0.1);
   }
   .quote-bubble::before {
     content: '❝'; position: absolute; top: 8px; left: 12px;
-    font-size: 1.5rem; color: rgba(168,255,120,0.3); line-height: 1;
+    font-size: 1.5rem; color: rgba(0,0,0,0.15); line-height: 1;
   }
   .quote-text {
     font-family: 'Noto Serif', serif; font-style: italic;
-    font-size: 0.88rem; color: rgba(255,255,255,0.85); line-height: 1.5;
+    font-size: 0.88rem; color: rgba(0,0,0,0.75); line-height: 1.5;
     padding: 0 12px;
   }
   .quote-author {
-    font-size: 0.7rem; color: #78ffd6; margin-top: 6px; font-weight: 700;
+    font-size: 0.7rem; color: #555; margin-top: 6px; font-weight: 700;
   }
-  .quote-bubble.flash { border-color: rgba(168,255,120,0.6); box-shadow: 0 0 20px rgba(168,255,120,0.2); }
+  .quote-bubble.flash { border-color: rgba(0,0,0,0.25); box-shadow: 0 0 20px rgba(0,0,0,0.1); }
 
   /* Float */
   .float-coin {
     position: fixed; font-weight: 900; font-size: 1.2rem;
-    color: #a8ff78; text-shadow: 0 0 10px rgba(168,255,120,0.8);
+    color: #333; text-shadow: 0 0 10px rgba(0,0,0,0.2);
     pointer-events: none; z-index: 1000; animation: floatUp 0.9s ease-out forwards;
   }
   @keyframes floatUp { 0% { opacity:1; transform:translateY(0) scale(1); } 100% { opacity:0; transform:translateY(-80px) scale(1.3); } }
   .ripple {
-    position: fixed; border-radius: 50%; background: rgba(168,255,120,0.2);
+    position: fixed; border-radius: 50%; background: rgba(0,0,0,0.1);
     transform: scale(0); animation: rippleOut 0.5s ease-out forwards; pointer-events: none; z-index: 999;
   }
   @keyframes rippleOut { to { transform:scale(4); opacity:0; } }
@@ -134,25 +129,25 @@
   /* Tabs */
   .tabs {
     width: 100%; display: flex; gap: 5px;
-    background: rgba(0,0,0,0.3); border-radius: 16px; padding: 4px;
+    background: rgba(0,0,0,0.12); border-radius: 16px; padding: 4px; border: 1px solid rgba(0,0,0,0.12);
   }
   .tab-btn {
     flex: 1; padding: 8px 4px; border: none; border-radius: 12px;
-    background: transparent; color: rgba(255,255,255,0.4);
+    background: transparent; color: rgba(0,0,0,0.4);
     font-family: 'Nunito', sans-serif; font-weight: 700; font-size: 0.72rem; cursor: pointer; transition: all 0.2s;
   }
   .tab-btn.active {
-    background: linear-gradient(135deg, rgba(168,255,120,0.18), rgba(120,255,214,0.1));
-    color: #a8ff78; border: 1px solid rgba(168,255,120,0.25);
+    background: rgba(255,255,255,0.9);
+    color: #222; border: 1px solid rgba(0,0,0,0.12); box-shadow: 0 2px 6px rgba(0,0,0,0.08);
   }
 
   /* Cards */
-  .section-title { width: 100%; font-weight: 900; font-size: 1rem; color: rgba(255,255,255,0.55); letter-spacing: 1px; padding-left: 2px; margin-bottom: -4px; }
+  .section-title { width: 100%; font-weight: 900; font-size: 1rem; color: rgba(0,0,0,0.45); letter-spacing: 1px; padding-left: 2px; margin-bottom: -4px; }
   .cards-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; width: 100%; }
   .biz-card {
-    background: var(--card); border-radius: 18px; padding: 14px 12px;
+    background: rgba(220,220,220,0.85); border-radius: 18px; padding: 14px 12px;
     cursor: pointer; transition: all 0.2s ease; backdrop-filter: blur(8px);
-    position: relative; overflow: hidden; border: 1px solid rgba(255,255,255,0.07);
+    position: relative; overflow: hidden; border: 1px solid rgba(0,0,0,0.1); box-shadow: 0 2px 10px rgba(0,0,0,0.1);
   }
   .biz-card::before {
     content: ''; position: absolute; top: 0; left: 0; right: 0;
@@ -162,8 +157,8 @@
   .biz-card.rarity-rare::before { background: linear-gradient(90deg, #4a9eff, #7bc8ff); }
   .biz-card.rarity-epic::before { background: linear-gradient(90deg, #a855f7, #d946ef); }
   .biz-card.rarity-legendary::before { background: linear-gradient(90deg, #a8ff78, #78ffd6); }
-  .biz-card.locked { opacity: 0.4; cursor: not-allowed; filter: grayscale(0.6); }
-  .biz-card.maxed { border-color: rgba(168,255,120,0.3); background: rgba(168,255,120,0.05); }
+  .biz-card.locked { opacity: 0.5; cursor: not-allowed; filter: grayscale(0.8); }
+  .biz-card.maxed { border-color: rgba(0,0,0,0.2); background: rgba(0,0,0,0.04); }
   .biz-card:not(.locked):not(.maxed):active { transform: scale(0.96); }
   .card-top { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 8px; }
   .card-emoji { font-size: 2.2rem; line-height: 1; }
@@ -171,35 +166,48 @@
   .rarity-common .card-rarity-badge { background: rgba(170,170,170,0.2); color: #ccc; }
   .rarity-rare .card-rarity-badge { background: rgba(74,158,255,0.2); color: #7bc8ff; }
   .rarity-epic .card-rarity-badge { background: rgba(168,85,247,0.2); color: #d946ef; }
-  .rarity-legendary .card-rarity-badge { background: rgba(168,255,120,0.15); color: #a8ff78; }
-  .card-name { font-weight: 900; font-size: 0.82rem; color: #fff; margin-bottom: 2px; line-height: 1.2; }
-  .card-income { font-weight: 900; font-size: 0.95rem; color: #78ffd6; margin-bottom: 8px; }
-  .card-income span { font-size: 0.65rem; color: rgba(255,255,255,0.35); }
+  .rarity-legendary .card-rarity-badge { background: rgba(0,0,0,0.1); color: #333; }
+  .card-name { font-weight: 900; font-size: 0.82rem; color: #111; margin-bottom: 2px; line-height: 1.2; }
+  .card-income { font-weight: 900; font-size: 0.95rem; color: #333; margin-bottom: 8px; }
+  .card-income span { font-size: 0.65rem; color: rgba(0,0,0,0.35); }
   .card-bottom { display: flex; align-items: center; justify-content: space-between; }
   .card-level-dots { display: flex; gap: 3px; }
-  .cdot { width: 5px; height: 5px; border-radius: 50%; background: rgba(255,255,255,0.12); }
-  .cdot.filled { background: #a8ff78; }
-  .card-cost { font-weight: 900; font-size: 0.85rem; color: #a8ff78; }
-  .card-cost.maxed-txt { color: #78ffd6; font-size: 0.75rem; }
+  .cdot { width: 5px; height: 5px; border-radius: 50%; background: rgba(0,0,0,0.12); }
+  .cdot.filled { background: #333; }
+  .card-cost { font-weight: 900; font-size: 0.85rem; color: #222; }
+  .card-cost.maxed-txt { color: #555; font-size: 0.75rem; }
+  .card-cooldown {
+    position: absolute; inset: 0; border-radius: 18px;
+    background: rgba(100,80,180,0.35); display: flex;
+    flex-direction: column; align-items: center; justify-content: center;
+    backdrop-filter: blur(2px); z-index: 2;
+  }
+  .card-cooldown-icon { font-size: 1.8rem; }
+  .card-cooldown-timer { font-weight: 900; font-size: 1rem; color: #fff; margin-top: 2px; }
+  .card-lvl-badge {
+    font-size: 0.7rem; font-weight: 900; color: #555;
+    background: rgba(0,0,0,0.08); border-radius: 8px;
+    padding: 2px 7px; border: 1px solid rgba(0,0,0,0.1);
+  }
 
   /* Leaderboard */
   .leaderboard { width: 100%; }
   .lb-row {
     display: flex; align-items: center; gap: 12px;
-    background: var(--card); border: 1px solid rgba(255,255,255,0.07);
-    border-radius: 14px; padding: 10px 14px; margin-bottom: 8px;
+    background: rgba(210,210,210,0.9); border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 14px; padding: 10px 14px; margin-bottom: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);
   }
-  .lb-row.me { border-color: rgba(168,255,120,0.35); background: rgba(168,255,120,0.07); }
+  .lb-row.me { border-color: rgba(0,0,0,0.2); background: rgba(0,0,0,0.04); }
   .lb-rank { font-weight: 900; font-size: 1.2rem; width: 30px; text-align: center; }
   .lb-rank.gold { color: #FFD700; }
   .lb-rank.silver { color: #C0C0C0; }
   .lb-rank.bronze { color: #CD7F32; }
-  .lb-name { flex: 1; font-weight: 700; font-size: 0.9rem; }
-  .lb-coins { font-weight: 900; color: #a8ff78; font-size: 0.95rem; }
-  .lb-loading { text-align: center; color: rgba(255,255,255,0.35); padding: 20px; font-size: 0.85rem; }
+  .lb-name { flex: 1; font-weight: 700; font-size: 0.9rem; color: #111; }
+  .lb-coins { font-weight: 900; color: #333; font-size: 0.95rem; }
+  .lb-loading { text-align: center; color: rgba(0,0,0,0.35); padding: 20px; font-size: 0.85rem; }
 
-  .income-ticker { width: 100%; text-align: center; font-size: 0.72rem; color: rgba(255,255,255,0.28); }
-  .income-ticker b { color: #78ffd6; }
+  .income-ticker { width: 100%; text-align: center; font-size: 0.72rem; color: rgba(0,0,0,0.35); }
+  .income-ticker b { color: #222; font-weight: 900; }
 
   /* Modal */
   .modal-overlay {
@@ -208,21 +216,93 @@
     z-index: 2000; backdrop-filter: blur(6px);
   }
   .modal {
-    background: #0a1f0a; border: 1px solid rgba(168,255,120,0.25);
+    background: #d0d0d0; border: 1px solid rgba(0,0,0,0.15);
     border-radius: 24px; padding: 28px 24px; width: 300px; text-align: center;
   }
-  .modal h2 { font-family: 'Ma Shan Zheng', cursive; color: #a8ff78; margin-bottom: 6px; font-size: 1.8rem; }
-  .modal p { font-size: 0.85rem; color: rgba(255,255,255,0.55); margin-bottom: 16px; }
+  .modal h2 { font-family: 'Ma Shan Zheng', cursive; color: #222; margin-bottom: 6px; font-size: 1.8rem; }
+  .modal p { font-size: 0.85rem; color: rgba(0,0,0,0.5); margin-bottom: 16px; }
   .modal input {
     width: 100%; padding: 10px 14px; border-radius: 12px;
-    border: 1px solid rgba(168,255,120,0.25); background: rgba(255,255,255,0.06);
-    color: #fff; font-size: 1rem; font-family: 'Nunito', sans-serif; outline: none; margin-bottom: 14px;
+    border: 1px solid rgba(0,0,0,0.15); background: rgba(255,255,255,0.9);
+    color: #111; font-size: 1rem; font-family: 'Nunito', sans-serif; outline: none; margin-bottom: 14px;
   }
   .modal-btn {
     width: 100%; padding: 12px; border-radius: 12px; border: none;
-    background: linear-gradient(135deg, #a8ff78, #78ffd6);
-    color: #0a1f0a; font-family: 'Nunito', sans-serif; font-weight: 900; font-size: 1rem; cursor: pointer;
+    background: linear-gradient(135deg, #333, #111);
+    color: #fff; font-family: 'Nunito', sans-serif; font-weight: 900; font-size: 1rem; cursor: pointer;
   }
+
+  /* Admin panel */
+  .admin-panel { width: 100%; display: flex; flex-direction: column; gap: 10px; }
+  .admin-title { font-weight: 900; font-size: 1.1rem; color: #111; display: flex; align-items: center; gap: 8px; }
+  .admin-player {
+    background: rgba(210,210,210,0.9); border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 14px; padding: 12px 14px; display: flex; flex-direction: column; gap: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  }
+  .admin-player.blocked { border-color: rgba(255,80,80,0.4); background: rgba(255,200,200,0.3); }
+  .admin-player-top { display: flex; align-items: center; justify-content: space-between; }
+  .admin-player-name { font-weight: 900; font-size: 0.95rem; color: #111; }
+  .admin-player-coins { font-size: 0.85rem; color: #444; }
+  .admin-blocked-badge { font-size: 0.65rem; background: rgba(255,80,80,0.2); color: #c00; padding: 2px 8px; border-radius: 10px; font-weight: 700; }
+  .admin-actions { display: flex; gap: 6px; flex-wrap: wrap; }
+  .admin-btn {
+    padding: 6px 12px; border-radius: 10px; border: none; font-size: 0.75rem;
+    font-family: 'Nunito', sans-serif; font-weight: 700; cursor: pointer; transition: all 0.15s;
+  }
+  .admin-btn:active { transform: scale(0.95); }
+  .btn-give { background: rgba(80,200,80,0.2); color: #060; border: 1px solid rgba(0,150,0,0.2); }
+  .btn-take { background: rgba(200,80,80,0.2); color: #600; border: 1px solid rgba(150,0,0,0.2); }
+  .btn-block { background: rgba(200,100,0,0.2); color: #630; border: 1px solid rgba(150,80,0,0.2); }
+  .btn-unblock { background: rgba(80,80,200,0.2); color: #006; border: 1px solid rgba(0,0,150,0.2); }
+  .admin-input-row { display: flex; gap: 6px; align-items: center; }
+  .admin-input {
+    flex: 1; padding: 6px 10px; border-radius: 10px; border: 1px solid rgba(0,0,0,0.15);
+    background: rgba(255,255,255,0.7); font-size: 0.85rem; outline: none; font-family: 'Nunito', sans-serif;
+  }
+  .admin-msg { font-size: 0.72rem; color: #555; text-align: center; padding: 6px; }
+
+
+  /* Pets */
+  .pets-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; width: 100%; }
+  .pet-card {
+    background: rgba(220,220,220,0.85); border-radius: 18px; padding: 14px 12px;
+    cursor: pointer; border: 1px solid rgba(0,0,0,0.1);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08); position: relative; overflow: hidden;
+    transition: all 0.2s;
+  }
+  .pet-card::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0;
+    height: 3px; border-radius: 18px 18px 0 0;
+  }
+  .pet-card.tier-1::before { background: linear-gradient(90deg,#aaa,#ddd); }
+  .pet-card.tier-2::before { background: linear-gradient(90deg,#4a9eff,#7bc8ff); }
+  .pet-card.tier-3::before { background: linear-gradient(90deg,#a855f7,#d946ef); }
+  .pet-card.tier-4::before { background: linear-gradient(90deg,#FFD700,#FF8C00); }
+  .pet-card.tier-5::before { background: linear-gradient(90deg,#ff4444,#ff9900); }
+  .pet-card.owned { border-color: rgba(0,180,0,0.4); background: rgba(200,240,200,0.6); }
+  .pet-card.locked-pet { opacity: 0.45; cursor: not-allowed; filter: grayscale(0.5); }
+  .pet-card:not(.locked-pet):not(.owned):active { transform: scale(0.96); }
+  .pet-emoji { font-size: 2.4rem; text-align: center; margin-bottom: 6px; }
+  .pet-name { font-weight: 900; font-size: 0.85rem; color: #111; margin-bottom: 2px; }
+  .pet-bonus { font-size: 0.78rem; color: #333; font-weight: 700; margin-bottom: 6px; }
+  .pet-bonus span { color: #555; font-weight: 400; }
+  .pet-cost { font-weight: 900; font-size: 0.82rem; color: #222; }
+  .pet-owned-badge {
+    position: absolute; top: 10px; right: 10px;
+    background: rgba(0,180,0,0.2); color: #060; font-size: 0.6rem;
+    font-weight: 900; padding: 2px 7px; border-radius: 10px; border: 1px solid rgba(0,150,0,0.2);
+  }
+  .active-pet-bar {
+    width: 100%; background: rgba(255,255,255,0.7); border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 14px; padding: 10px 14px; display: flex; align-items: center; gap: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06); margin-bottom: 4px;
+  }
+  .active-pet-emoji { font-size: 1.8rem; }
+  .active-pet-info { flex: 1; }
+  .active-pet-name { font-weight: 900; font-size: 0.85rem; color: #111; }
+  .active-pet-bonus { font-size: 0.72rem; color: #555; }
+
 </style>
 </head>
 <body>
@@ -232,6 +312,7 @@
     <h2>🐼 Панда</h2>
     <p>Введи своё имя для таблицы мудрецов</p>
     <input type="text" id="nameInput" placeholder="Твоё имя..." maxlength="20">
+    <div id="nameError" style="display:none;color:#ff6b6b;font-size:0.8rem;margin-bottom:10px;"></div>
     <button class="modal-btn" onclick="saveName()">Начать путь мудрости</button>
   </div>
 </div>
@@ -278,6 +359,8 @@
     <button class="tab-btn" onclick="switchTab('nature')">🌿 Природа</button>
     <button class="tab-btn" onclick="switchTab('power')">⚡ Сила</button>
     <button class="tab-btn" onclick="switchTab('top')">🏆 Мудрецы</button>
+    <button class="tab-btn" onclick="switchTab('pets')">🐾 Питомцы</button>
+    <button class="tab-btn" id="adminTabBtn" onclick="switchTab('admin')" style="display:none">🔐 Админ</button>
   </div>
 
   <div class="cards-section" style="width:100%">
@@ -285,11 +368,14 @@
     <div style="height:8px"></div>
     <div id="cardsGrid" class="cards-grid"></div>
     <div id="leaderboardSection" class="leaderboard" style="display:none"></div>
+    <div id="adminSection" style="display:none;width:100%"></div>
+    <div id="petsSection" style="display:none;width:100%"></div>
   </div>
 </div>
 
 <script>
 const BIN_ID = '6a1b5a6821f9ee59d29f11f8';
+const ADMINS = ['Панда'];
 const API_KEY = '$2a$10$ZamoaCNMGwDaxtKC57VVUO8ea2UL2cw.Di.gZdv.zRzmu7coa1TKi';
 const API_URL = `https://api.jsonbin.io/v3/b/${BIN_ID}`;
 
@@ -323,43 +409,136 @@ const QUOTES = [
 
 const ALL_CARDS = {
   zen: [
-    { id:'meditation', emoji:'🧘', name:'Медитация',       rarity:'common',    baseCost:100,   incomePerSec:1,  tapBonus:0, maxLevel:10 },
-    { id:'tea',        emoji:'🍵', name:'Чайная церемония',rarity:'common',    baseCost:300,   incomePerSec:3,  tapBonus:0, maxLevel:10 },
-    { id:'incense',    emoji:'🕯️', name:'Благовония',     rarity:'rare',      baseCost:800,   incomePerSec:8,  tapBonus:1, maxLevel:8  },
-    { id:'zen_garden', emoji:'🪨', name:'Сад камней',      rarity:'rare',      baseCost:2000,  incomePerSec:20, tapBonus:2, maxLevel:8  },
-    { id:'temple',     emoji:'⛩️', name:'Храм',           rarity:'epic',      baseCost:8000,  incomePerSec:70, tapBonus:5, maxLevel:5  },
-    { id:'monastery',  emoji:'🏯', name:'Монастырь',       rarity:'epic',      baseCost:20000, incomePerSec:180,tapBonus:8, maxLevel:5  },
-    { id:'enlighten',  emoji:'☀️', name:'Просветление',   rarity:'legendary', baseCost:80000, incomePerSec:600,tapBonus:20,maxLevel:3  },
-    { id:'nirvana',    emoji:'🌌', name:'Нирвана',         rarity:'legendary', baseCost:250000,incomePerSec:1500,tapBonus:50,maxLevel:3 },
+    { id:'meditation', emoji:'🧘', name:'Медитация',       rarity:'common',    baseCost:50,    incomePerSec:1,   tapBonus:0,  maxLevel:100 },
+    { id:'tea',        emoji:'🍵', name:'Чайная церемония',rarity:'common',    baseCost:200,   incomePerSec:4,   tapBonus:0,  maxLevel:100 },
+    { id:'incense',    emoji:'🕯️', name:'Благовония',     rarity:'rare',      baseCost:600,   incomePerSec:10,  tapBonus:1,  maxLevel:100 },
+    { id:'zen_garden', emoji:'🪨', name:'Сад камней',      rarity:'rare',      baseCost:1500,  incomePerSec:25,  tapBonus:2,  maxLevel:100 },
+    { id:'temple',     emoji:'⛩️', name:'Храм',           rarity:'epic',      baseCost:5000,  incomePerSec:70,  tapBonus:4,  maxLevel:100 },
+    { id:'monastery',  emoji:'🏯', name:'Монастырь',       rarity:'epic',      baseCost:15000, incomePerSec:180, tapBonus:7,  maxLevel:100 },
+    { id:'enlighten',  emoji:'☀️', name:'Просветление',   rarity:'legendary', baseCost:50000, incomePerSec:500, tapBonus:15, maxLevel:100 },
+    { id:'nirvana',    emoji:'🌌', name:'Нирвана',         rarity:'legendary', baseCost:200000,incomePerSec:1500,tapBonus:40, maxLevel:100 },
   ],
   nature: [
-    { id:'bamboo',     emoji:'🎋', name:'Бамбуковый лес',  rarity:'common',    baseCost:150,   incomePerSec:2,  tapBonus:0, maxLevel:10 },
-    { id:'lotus',      emoji:'🪷', name:'Лотос',           rarity:'common',    baseCost:400,   incomePerSec:5,  tapBonus:0, maxLevel:10 },
-    { id:'waterfall',  emoji:'💧', name:'Водопад',         rarity:'rare',      baseCost:1200,  incomePerSec:13, tapBonus:1, maxLevel:8  },
-    { id:'mountain',   emoji:'⛰️', name:'Гора мудрости',  rarity:'rare',      baseCost:3500,  incomePerSec:35, tapBonus:3, maxLevel:8  },
-    { id:'sakura',     emoji:'🌸', name:'Сад сакуры',      rarity:'epic',      baseCost:12000, incomePerSec:100,tapBonus:6, maxLevel:5  },
-    { id:'dragon_tree',emoji:'🌳', name:'Дерево дракона',  rarity:'epic',      baseCost:35000, incomePerSec:280,tapBonus:10,maxLevel:5  },
-    { id:'spirit_forest',emoji:'🌲',name:'Дух леса',       rarity:'legendary', baseCost:120000,incomePerSec:800,tapBonus:30,maxLevel:3  },
-    { id:'cosmos',     emoji:'🌿', name:'Космос природы',  rarity:'legendary', baseCost:400000,incomePerSec:2000,tapBonus:80,maxLevel:3 },
+    { id:'bamboo',     emoji:'🎋', name:'Бамбуковый лес',  rarity:'common',    baseCost:80,    incomePerSec:2,   tapBonus:0,  maxLevel:100 },
+    { id:'lotus',      emoji:'🪷', name:'Лотос',           rarity:'common',    baseCost:300,   incomePerSec:6,   tapBonus:0,  maxLevel:100 },
+    { id:'waterfall',  emoji:'💧', name:'Водопад',         rarity:'rare',      baseCost:900,   incomePerSec:15,  tapBonus:1,  maxLevel:100 },
+    { id:'mountain',   emoji:'⛰️', name:'Гора мудрости',  rarity:'rare',      baseCost:2500,  incomePerSec:40,  tapBonus:2,  maxLevel:100 },
+    { id:'sakura',     emoji:'🌸', name:'Сад сакуры',      rarity:'epic',      baseCost:8000,  incomePerSec:100, tapBonus:5,  maxLevel:100 },
+    { id:'dragon_tree',emoji:'🌳', name:'Дерево дракона',  rarity:'epic',      baseCost:25000, incomePerSec:280, tapBonus:8,  maxLevel:100 },
+    { id:'spirit_forest',emoji:'🌲',name:'Дух леса',       rarity:'legendary', baseCost:80000, incomePerSec:700, tapBonus:20, maxLevel:100 },
+    { id:'cosmos',     emoji:'🌿', name:'Космос природы',  rarity:'legendary', baseCost:300000,incomePerSec:2000,tapBonus:60, maxLevel:100 },
   ],
   power: [
-    { id:'chi',        emoji:'✨', name:'Энергия Ци',      rarity:'rare',      baseCost:500,   incomePerSec:6,  tapBonus:2, maxLevel:5  },
-    { id:'dragon',     emoji:'🐉', name:'Сила дракона',    rarity:'epic',      baseCost:5000,  incomePerSec:50, tapBonus:8, maxLevel:5  },
-    { id:'tiger',      emoji:'🐯', name:'Тигриный дух',    rarity:'epic',      baseCost:15000, incomePerSec:150,tapBonus:12,maxLevel:4  },
-    { id:'phoenix',    emoji:'🦅', name:'Феникс',          rarity:'legendary', baseCost:60000, incomePerSec:500,tapBonus:25,maxLevel:3  },
-    { id:'universe',   emoji:'🌀', name:'Сила вселенной',  rarity:'legendary', baseCost:200000,incomePerSec:1200,tapBonus:60,maxLevel:3 },
-    { id:'panda_god',  emoji:'🐼', name:'Панда-Бог',       rarity:'legendary', baseCost:999999,incomePerSec:5000,tapBonus:150,maxLevel:1 },
+    { id:'chi',        emoji:'✨', name:'Энергия Ци',      rarity:'rare',      baseCost:400,   incomePerSec:8,   tapBonus:2,  maxLevel:100 },
+    { id:'dragon',     emoji:'🐉', name:'Сила дракона',    rarity:'epic',      baseCost:4000,  incomePerSec:60,  tapBonus:6,  maxLevel:100 },
+    { id:'tiger',      emoji:'🐯', name:'Тигриный дух',    rarity:'epic',      baseCost:12000, incomePerSec:150, tapBonus:10, maxLevel:100 },
+    { id:'phoenix',    emoji:'🦅', name:'Феникс',          rarity:'legendary', baseCost:40000, incomePerSec:400, tapBonus:18, maxLevel:100 },
+    { id:'universe',   emoji:'🌀', name:'Сила вселенной',  rarity:'legendary', baseCost:150000,incomePerSec:1200,tapBonus:50, maxLevel:100 },
+    { id:'panda_god',  emoji:'🐼', name:'Панда-Бог',       rarity:'legendary', baseCost:500000,incomePerSec:4000,tapBonus:120,maxLevel:100 },
   ]
 };
 
 const LEVELS = [
-  { min:0,      name:'Ученик' },
-  { min:500,    name:'Искатель' },
-  { min:2000,   name:'Практик' },
-  { min:10000,  name:'Мастер' },
-  { min:50000,  name:'Наставник' },
-  { min:200000, name:'Мудрец' },
-  { min:1000000,name:'Просветлённый 🌟' },
+  { min:0, name:'Ученик' },
+  { min:500, name:'Ученик' },
+  { min:750, name:'Ученик' },
+  { min:1125, name:'Ученик' },
+  { min:1687, name:'Ученик' },
+  { min:2531, name:'Искатель' },
+  { min:3796, name:'Искатель' },
+  { min:5695, name:'Искатель' },
+  { min:8542, name:'Искатель' },
+  { min:12814, name:'Искатель' },
+  { min:19221, name:'Практик' },
+  { min:28832, name:'Практик' },
+  { min:43248, name:'Практик' },
+  { min:64873, name:'Практик' },
+  { min:97309, name:'Практик' },
+  { min:145964, name:'Послушник' },
+  { min:218946, name:'Послушник' },
+  { min:328420, name:'Послушник' },
+  { min:492630, name:'Послушник' },
+  { min:738945, name:'Послушник' },
+  { min:1108418, name:'Мыслитель' },
+  { min:1662628, name:'Мыслитель' },
+  { min:2493942, name:'Мыслитель' },
+  { min:3740913, name:'Мыслитель' },
+  { min:5611370, name:'Мыслитель' },
+  { min:8417056, name:'Мастер' },
+  { min:12625584, name:'Мастер' },
+  { min:18938376, name:'Мастер' },
+  { min:28407564, name:'Мастер' },
+  { min:42611346, name:'Мастер' },
+  { min:63917019, name:'Наставник' },
+  { min:95875529, name:'Наставник' },
+  { min:143813294, name:'Наставник' },
+  { min:215719941, name:'Наставник' },
+  { min:323579912, name:'Наставник' },
+  { min:485369868, name:'Мудрец' },
+  { min:728054803, name:'Мудрец' },
+  { min:1092082204, name:'Мудрец' },
+  { min:1638123306, name:'Мудрец' },
+  { min:2457184960, name:'Мудрец' },
+  { min:3685777440, name:'Просветлённый' },
+  { min:5528666160, name:'Просветлённый' },
+  { min:8292999240, name:'Просветлённый' },
+  { min:12439498861, name:'Просветлённый' },
+  { min:18659248291, name:'Просветлённый' },
+  { min:27988872437, name:'Хранитель' },
+  { min:41983308656, name:'Хранитель' },
+  { min:62974962984, name:'Хранитель' },
+  { min:94462444476, name:'Хранитель' },
+  { min:141693666714, name:'Хранитель' },
+  { min:212540500071, name:'Архимастер' },
+  { min:318810750107, name:'Архимастер' },
+  { min:478216125160, name:'Архимастер' },
+  { min:717324187740, name:'Архимастер' },
+  { min:1075986281611, name:'Архимастер' },
+  { min:1613979422416, name:'Дракон' },
+  { min:2420969133625, name:'Дракон' },
+  { min:3631453700437, name:'Дракон' },
+  { min:5447180550656, name:'Дракон' },
+  { min:8170770825985, name:'Дракон' },
+  { min:12256156238977, name:'Небожитель' },
+  { min:18384234358466, name:'Небожитель' },
+  { min:27576351537699, name:'Небожитель' },
+  { min:41364527306549, name:'Небожитель' },
+  { min:62046790959824, name:'Небожитель' },
+  { min:93070186439736, name:'Дух Неба' },
+  { min:139605279659605, name:'Дух Неба' },
+  { min:209407919489407, name:'Дух Неба' },
+  { min:314111879234111, name:'Дух Неба' },
+  { min:471167818851167, name:'Дух Неба' },
+  { min:706751728276750, name:'Бессмертный' },
+  { min:1060127592415126, name:'Бессмертный' },
+  { min:1590191388622689, name:'Бессмертный' },
+  { min:2385287082934033, name:'Бессмертный' },
+  { min:3577930624401050, name:'Бессмертный' },
+  { min:5366895936601575, name:'Легенда' },
+  { min:8050343904902363, name:'Легенда' },
+  { min:12075515857353544, name:'Легенда' },
+  { min:18113273786030316, name:'Легенда' },
+  { min:27169910679045472, name:'Легенда' },
+  { min:40754866018568208, name:'Великий Дух' },
+  { min:61132299027852320, name:'Великий Дух' },
+  { min:91698448541778480, name:'Великий Дух' },
+  { min:137547672812667712, name:'Великий Дух' },
+  { min:206321509219001568, name:'Великий Дух' },
+  { min:309482263828502400, name:'Хранитель Вселенной' },
+  { min:464223395742753536, name:'Хранитель Вселенной' },
+  { min:696335093614130304, name:'Хранитель Вселенной' },
+  { min:1044502640421195520, name:'Хранитель Вселенной' },
+  { min:1566753960631793152, name:'Хранитель Вселенной' },
+  { min:2350130940947689984, name:'Бог Мудрости' },
+  { min:3525196411421534720, name:'Бог Мудрости' },
+  { min:5287794617132302336, name:'Бог Мудрости' },
+  { min:7931691925698453504, name:'Бог Мудрости' },
+  { min:11897537888547680256, name:'Бог Мудрости' },
+  { min:17846306832821520384, name:'Панда-Бог 🌟' },
+  { min:26769460249232281600, name:'Панда-Бог 🌟' },
+  { min:40154190373848416256, name:'Панда-Бог 🌟' },
+  { min:60231285560772624384, name:'Панда-Бог 🌟' },
+  { min:90346928341158936576, name:'Просветлённый 🌟' }
 ];
 
 let coins = 0, totalTaps = 0, tapPower = 1, autoPerSec = 0;
@@ -369,6 +548,7 @@ let playerName = '';
 let lastQuoteIdx = -1;
 
 Object.values(ALL_CARDS).flat().forEach(c => cardLevels[c.id] = 0);
+let cardCooldowns = {}; // id -> timestamp when cooldown ends
 
 function getRandomQuote() {
   let idx;
@@ -388,12 +568,31 @@ function showQuote() {
   setTimeout(() => bubble.classList.remove('flash'), 400);
 }
 
-function saveName() {
+async function saveName() {
   const n = document.getElementById('nameInput').value.trim();
   if (!n) return;
+  const btn = document.querySelector('.modal-btn');
+  const err = document.getElementById('nameError');
+  btn.textContent = '⏳ Проверяем...';
+  btn.disabled = true;
+  err.style.display = 'none';
+  try {
+    const lb = await fetchLeaderboard();
+    const taken = lb.find(p => p.name.toLowerCase() === n.toLowerCase());
+    if (taken) {
+      err.textContent = '❌ Этот ник уже занят! Выбери другой.';
+      err.style.display = 'block';
+      btn.textContent = 'Начать путь мудрости';
+      btn.disabled = false;
+      return;
+    }
+  } catch(e) {}
   playerName = n;
   localStorage.setItem('panda_name', n);
   document.getElementById('nameModal').style.display = 'none';
+  btn.textContent = 'Начать путь мудрости';
+  btn.disabled = false;
+  updateLeaderboard();
 }
 function checkName() {
   const n = localStorage.getItem('panda_name');
@@ -401,7 +600,7 @@ function checkName() {
 }
 
 function saveGame() {
-  localStorage.setItem('panda_v1', JSON.stringify({ coins, totalTaps, tapPower, autoPerSec, cardLevels }));
+  localStorage.setItem('panda_v1', JSON.stringify({ coins, totalTaps, tapPower, autoPerSec, cardLevels, cardCooldowns }));
 }
 function loadGame() {
   try {
@@ -410,6 +609,7 @@ function loadGame() {
     const d = JSON.parse(s);
     coins = d.coins||0; totalTaps = d.totalTaps||0; tapPower = d.tapPower||1; autoPerSec = d.autoPerSec||0;
     if (d.cardLevels) Object.keys(d.cardLevels).forEach(k => { if (cardLevels[k]!==undefined) cardLevels[k]=d.cardLevels[k]; });
+    if (d.cardCooldowns) cardCooldowns = d.cardCooldowns;
   } catch(e) {}
 }
 
@@ -420,6 +620,17 @@ async function fetchLeaderboard() {
     return data.record.leaderboard || [];
   } catch(e) { return []; }
 }
+async function checkIfBlocked() {
+  if (!playerName) return;
+  try {
+    const lb = await fetchLeaderboard();
+    const me = lb.find(p => p.name === playerName);
+    if (me && me.blocked) {
+      document.body.innerHTML = '<div style="display:flex;align-items:center;justify-content:center;height:100vh;flex-direction:column;gap:16px;background:#d0d0d0;font-family:Nunito,sans-serif"><div style="font-size:4rem">🚫</div><div style="font-size:1.2rem;font-weight:900;color:#333">Ты заблокирован</div><div style="font-size:0.85rem;color:#666">Обратись к администратору</div></div>';
+    }
+  } catch(e) {}
+}
+
 async function updateLeaderboard() {
   if (!playerName) return;
   try {
@@ -453,12 +664,15 @@ async function renderLeaderboard() {
 }
 
 function formatNum(n) {
-  if (n>=1e9) return (n/1e9).toFixed(1)+'Б';
-  if (n>=1e6) return (n/1e6).toFixed(1)+'М';
-  if (n>=1e3) return (n/1e3).toFixed(1)+'К';
+  if (n>=1e18) return (n/1e18).toFixed(2)+'Квн';
+  if (n>=1e15) return (n/1e15).toFixed(2)+'Трл';
+  if (n>=1e12) return (n/1e12).toFixed(2)+'Трн';
+  if (n>=1e9)  return (n/1e9).toFixed(2)+'Млрд';
+  if (n>=1e6)  return (n/1e6).toFixed(2)+'Млн';
+  if (n>=1e3)  return (n/1e3).toFixed(1)+'К';
   return Math.floor(n).toLocaleString('ru');
 }
-function getCardCost(card) { return Math.floor(card.baseCost * Math.pow(2.5, cardLevels[card.id])); }
+function getCardCost(card) { return Math.floor(card.baseCost * Math.pow(1.3, cardLevels[card.id])); }
 function getLevelInfo() {
   let idx=0;
   for (let i=LEVELS.length-1;i>=0;i--) { if (coins>=LEVELS[i].min) { idx=i; break; } }
@@ -468,13 +682,17 @@ function getLevelInfo() {
 function switchTab(tab) {
   currentTab = tab;
   document.querySelectorAll('.tab-btn').forEach((b,i) => {
-    b.classList.toggle('active', ['zen','nature','power','top'][i]===tab);
+    b.classList.toggle('active', ['zen','nature','power','top','pets','admin'][i]===tab);
   });
-  const titles = { zen:'🍵 Дзен-практики', nature:'🌿 Силы природы', power:'⚡ Духовная сила', top:'🏆 Великие мудрецы' };
+  const titles = { zen:'🍵 Дзен-практики', nature:'🌿 Силы природы', power:'⚡ Духовная сила', top:'🏆 Великие мудрецы', pets:'🐾 Питомцы', admin:'🔐 Админ-панель' };
   document.getElementById('sectionTitle').textContent = titles[tab];
-  document.getElementById('cardsGrid').style.display = tab==='top'?'none':'grid';
+  document.getElementById('cardsGrid').style.display = (tab==='top'||tab==='admin'||tab==='pets')?'none':'grid';
   document.getElementById('leaderboardSection').style.display = tab==='top'?'block':'none';
+  document.getElementById('adminSection').style.display = tab==='admin'?'block':'none';
+  document.getElementById('petsSection').style.display = tab==='pets'?'block':'none';
   if (tab==='top') renderLeaderboard();
+  else if (tab==='admin') renderAdmin();
+  else if (tab==='pets') renderPets();
   else renderCards();
 }
 
@@ -513,18 +731,27 @@ function renderCards() {
     const incomeNow=card.incomePerSec*(lvl+1);
     const el=document.createElement('div');
     el.className=`biz-card rarity-${card.rarity}`+(isMax?' maxed':(!canAfford?' locked':''));
-    let dots='';
-    for (let i=0;i<Math.min(card.maxLevel,5);i++) dots+=`<div class="cdot${i<lvl?' filled':''}"></div>`;
+    const lvlBadge = `<div class="card-lvl-badge">УР.${lvl}</div>`;
     const rarityNames={common:'Обычная',rare:'Редкая',epic:'Эпическая',legendary:'Легендарная'};
     el.innerHTML=`
       <div class="card-top"><div class="card-emoji">${card.emoji}</div><div class="card-rarity-badge">${rarityNames[card.rarity]}</div></div>
       <div class="card-name">${card.name}</div>
       <div class="card-income">+${formatNum(incomeNow)} <span>/сек</span>${card.tapBonus?`  +${card.tapBonus*Math.max(1,lvl)} <span>тап</span>`:''}</div>
       <div class="card-bottom">
-        <div class="card-level-dots">${dots}</div>
+        ${lvlBadge}
         <div class="card-cost ${isMax?'maxed-txt':''}">${isMax?'✅ МАКС':'☯️ '+formatNum(cost)}</div>
       </div>`;
-    if (!isMax&&canAfford) el.addEventListener('click',()=>buyCard(card.id));
+    const now = Date.now();
+    const cdEnd = cardCooldowns[card.id] || 0;
+    const onCooldown = cdEnd > now;
+    if (onCooldown) {
+      const secsLeft = Math.ceil((cdEnd - now) / 1000);
+      const overlay = document.createElement('div');
+      overlay.className = 'card-cooldown';
+      overlay.innerHTML = `<div class="card-cooldown-icon">🧙</div><div class="card-cooldown-timer">${secsLeft}с</div>`;
+      el.appendChild(overlay);
+    }
+    if (!isMax && canAfford && !onCooldown) el.addEventListener('click',()=>buyCard(card.id));
     grid.appendChild(el);
   });
 }
@@ -534,6 +761,7 @@ function buyCard(id) {
   const cost=getCardCost(card);
   if (coins<cost||cardLevels[id]>=card.maxLevel) return;
   coins-=cost; cardLevels[id]++; tapPower+=card.tapBonus; autoPerSec+=card.incomePerSec;
+  cardCooldowns[id] = Date.now() + 60000; // 1 min cooldown
   const btn=document.getElementById('pandaBtn');
   btn.style.transform='scale(1.12)';
   setTimeout(()=>btn.style.transform='',180);
@@ -542,7 +770,8 @@ function buyCard(id) {
 
 let tapCount = 0;
 function handleTap(e) {
-  coins+=tapPower; totalTaps++; tapCount++;
+  const actualTap = Math.floor(tapPower * petTapMult);
+  coins+=actualTap; totalTaps++; tapCount++;
   if (tapCount % 5 === 0) showQuote();
   const fc=document.createElement('div');
   fc.className='float-coin'; fc.textContent='+'+tapPower;
@@ -562,11 +791,256 @@ document.getElementById('pandaBtn').addEventListener('touchstart', (e) => {
   handleTap({ clientX:t.clientX, clientY:t.clientY });
 }, { passive:false });
 
-setInterval(()=>{ if(autoPerSec>0){coins+=autoPerSec;updateUI();saveGame();} },1000);
+setInterval(()=>{
+  if(autoPerSec>0){coins+=autoPerSec;}
+  updateUI(); saveGame();
+},1000);
 setInterval(()=>{ updateLeaderboard(); },30000);
 
-loadGame(); checkName(); updateUI();
+loadGame(); loadPets(); checkName(); updateUI(); checkAdminAccess(); setTimeout(checkIfBlocked, 2000);
 setTimeout(updateLeaderboard,3000);
+
+
+// ===================== ADMIN =====================
+function isAdmin() { return ADMINS.includes(playerName); }
+
+function checkAdminAccess() {
+  if (isAdmin()) {
+    document.getElementById('adminTabBtn').style.display = 'flex';
+  }
+}
+
+async function renderAdmin() {
+  const sec = document.getElementById('adminSection');
+  sec.innerHTML = '<div class="admin-msg">⏳ Загрузка игроков...</div>';
+  const lb = await fetchLeaderboard();
+
+
+  let html = '<div class="admin-panel">';
+  html += '<div class="admin-title">🔐 Панель администратора</div>';
+  html += `<div class="admin-player">
+    <div class="admin-player-name">👑 Выдать себе (${playerName})</div>
+    <div class="admin-input-row">
+      <input class="admin-input" id="self_amt" type="number" placeholder="Сумма..." min="1">
+    </div>
+    <div class="admin-actions">
+      <button class="admin-btn btn-give" onclick="adminGiveSelf()">➕ Выдать себе</button>
+      <button class="admin-btn btn-take" onclick="adminTakeSelf()">➖ Забрать у себя</button>
+    </div>
+  </div>
+  <hr style="border:none;border-top:1px solid rgba(0,0,0,0.1);margin:4px 0">`;
+
+  lb.forEach((p, i) => {
+    const isBlocked = p.blocked === true;
+    html += `<div class="admin-player${isBlocked ? ' blocked' : ''}">
+      <div class="admin-player-top">
+        <div>
+          <div class="admin-player-name">${p.name} ${isBlocked ? '<span class="admin-blocked-badge">БЛОК</span>' : ''}</div>
+          <div class="admin-player-coins">☯️ ${formatNum(p.coins)} очков</div>
+        </div>
+      </div>
+      <div class="admin-input-row">
+        <input class="admin-input" id="amt_${i}" type="number" placeholder="Сумма..." min="1">
+      </div>
+      <div class="admin-actions">
+        <button class="admin-btn btn-give" onclick="adminGive(${i}, '${p.name}')">➕ Дать</button>
+        <button class="admin-btn btn-take" onclick="adminTake(${i}, '${p.name}')">➖ Забрать</button>
+        ${isBlocked
+          ? `<button class="admin-btn btn-unblock" onclick="adminUnblock('${p.name}')">✅ Разблок</button>`
+          : `<button class="admin-btn btn-block" onclick="adminBlock('${p.name}')">🚫 Блок</button>`
+        }
+      </div>
+    </div>`;
+  });
+
+  html += '</div>';
+  sec.innerHTML = html;
+}
+
+async function adminGiveSelf() {
+  const val = parseInt(document.getElementById('self_amt').value);
+  if (!val || val <= 0) return alert('Введи сумму!');
+  coins += val;
+  updateUI(); saveGame();
+  await updateLeaderboard();
+  alert('✅ Выдано ' + formatNum(val) + ' очков себе!');
+  renderAdmin();
+}
+
+async function adminTakeSelf() {
+  const val = parseInt(document.getElementById('self_amt').value);
+  if (!val || val <= 0) return alert('Введи сумму!');
+  coins = Math.max(0, coins - val);
+  updateUI(); saveGame();
+  await updateLeaderboard();
+  alert('✅ Забрано ' + formatNum(val) + ' очков у себя');
+  renderAdmin();
+}
+
+async function adminGive(idx, name) {
+  const val = parseInt(document.getElementById('amt_' + idx).value);
+  if (!val || val <= 0) return alert('Введи сумму!');
+  let lb = await fetchLeaderboard();
+  const p = lb.find(x => x.name === name);
+  if (!p) return;
+  p.coins = (p.coins || 0) + val;
+  await saveLb(lb);
+  alert(`✅ Выдано ${formatNum(val)} очков игроку ${name}`);
+  renderAdmin();
+}
+
+async function adminTake(idx, name) {
+  const val = parseInt(document.getElementById('amt_' + idx).value);
+  if (!val || val <= 0) return alert('Введи сумму!');
+  let lb = await fetchLeaderboard();
+  const p = lb.find(x => x.name === name);
+  if (!p) return;
+  p.coins = Math.max(0, (p.coins || 0) - val);
+  await saveLb(lb);
+  alert(`✅ Забрано ${formatNum(val)} очков у игрока ${name}`);
+  renderAdmin();
+}
+
+async function adminBlock(name) {
+  if (!confirm(`Заблокировать ${name}?`)) return;
+  let lb = await fetchLeaderboard();
+  const p = lb.find(x => x.name === name);
+  if (!p) return;
+  p.blocked = true;
+  await saveLb(lb);
+  alert(`🚫 ${name} заблокирован`);
+  renderAdmin();
+}
+
+async function adminUnblock(name) {
+  let lb = await fetchLeaderboard();
+  const p = lb.find(x => x.name === name);
+  if (!p) return;
+  p.blocked = false;
+  await saveLb(lb);
+  alert(`✅ ${name} разблокирован`);
+  renderAdmin();
+}
+
+async function saveLb(lb) {
+  await fetch(API_URL, {
+    method: 'PUT',
+    headers: { 'Content-Type': 'application/json', 'X-Master-Key': API_KEY },
+    body: JSON.stringify({ leaderboard: lb })
+  });
+}
+
+
+// ===================== PETS =====================
+const PETS = [
+  { id:'cat',      emoji:'🐱', name:'Рыжий кот',      tier:1, cost:500,    tapMult:1.1, desc:'+10% к тапу' },
+  { id:'rabbit',   emoji:'🐰', name:'Белый кролик',   tier:1, cost:800,    tapMult:1.15,desc:'+15% к тапу' },
+  { id:'hamster',  emoji:'🐹', name:'Хомячок',        tier:1, cost:1200,   tapMult:1.2, desc:'+20% к тапу' },
+  { id:'puppy',    emoji:'🐶', name:'Щенок',          tier:1, cost:2000,   tapMult:1.25,desc:'+25% к тапу' },
+  { id:'turtle',   emoji:'🐢', name:'Черепаха',       tier:2, cost:4000,   tapMult:1.5, desc:'+50% к тапу' },
+  { id:'fox',      emoji:'🦊', name:'Лиса',           tier:2, cost:7000,   tapMult:1.6, desc:'+60% к тапу' },
+  { id:'owl',      emoji:'🦉', name:'Сова мудрости',  tier:2, cost:12000,  tapMult:1.7, desc:'+70% к тапу' },
+  { id:'penguin',  emoji:'🐧', name:'Пингвин',        tier:2, cost:20000,  tapMult:1.8, desc:'+80% к тапу' },
+  { id:'wolf',     emoji:'🐺', name:'Волк',           tier:3, cost:40000,  tapMult:2.0, desc:'×2 к тапу' },
+  { id:'bear',     emoji:'🐻', name:'Медведь',        tier:3, cost:70000,  tapMult:2.2, desc:'×2.2 к тапу' },
+  { id:'tiger',    emoji:'🐯', name:'Тигр',           tier:3, cost:120000, tapMult:2.5, desc:'×2.5 к тапу' },
+  { id:'lion',     emoji:'🦁', name:'Лев',            tier:3, cost:200000, tapMult:2.8, desc:'×2.8 к тапу' },
+  { id:'dragon',   emoji:'🐲', name:'Дракон',         tier:4, cost:400000, tapMult:3.0, desc:'×3 к тапу' },
+  { id:'unicorn',  emoji:'🦄', name:'Единорог',       tier:4, cost:700000, tapMult:3.3, desc:'×3.3 к тапу' },
+  { id:'phoenix',  emoji:'🔥', name:'Феникс',         tier:4, cost:1200000,tapMult:3.6, desc:'×3.6 к тапу' },
+  { id:'kirin',    emoji:'🦌', name:'Цилинь',         tier:4, cost:2000000,tapMult:4.0, desc:'×4 к тапу' },
+  { id:'spirit',   emoji:'👻', name:'Дух предков',    tier:5, cost:4000000,tapMult:4.2, desc:'×4.2 к тапу' },
+  { id:'celestial',emoji:'⭐', name:'Небесный зверь', tier:5, cost:7000000,tapMult:4.5, desc:'×4.5 к тапу' },
+  { id:'cosmos',   emoji:'🌌', name:'Космический зверь',tier:5,cost:12000000,tapMult:4.8,desc:'×4.8 к тапу' },
+  { id:'god_pet',  emoji:'🐼', name:'Панда-Дух',      tier:5, cost:20000000,tapMult:5.0, desc:'×5 к тапу' },
+];
+
+let ownedPets = new Set();
+let activePet = null;
+
+function savePets() {
+  localStorage.setItem('panda_pets', JSON.stringify({ owned: [...ownedPets], active: activePet }));
+}
+function loadPets() {
+  try {
+    const s = localStorage.getItem('panda_pets');
+    if (!s) return;
+    const d = JSON.parse(s);
+    ownedPets = new Set(d.owned || []);
+    activePet = d.active || null;
+    applyPetBonus();
+  } catch(e) {}
+}
+
+function applyPetBonus() {
+  if (!activePet) { petTapMult = 1; return; }
+  const pet = PETS.find(p => p.id === activePet);
+  petTapMult = pet ? pet.tapMult : 1;
+}
+
+function renderPets() {
+  const sec = document.getElementById('petsSection');
+  const pet = activePet ? PETS.find(p => p.id === activePet) : null;
+
+  let html = '';
+  if (pet) {
+    html += `<div class="active-pet-bar">
+      <div class="active-pet-emoji">${pet.emoji}</div>
+      <div class="active-pet-info">
+        <div class="active-pet-name">Активный: ${pet.name}</div>
+        <div class="active-pet-bonus">${pet.desc} — множитель ×${pet.tapMult}</div>
+      </div>
+      <button class="admin-btn btn-take" onclick="deactivatePet()" style="font-size:0.7rem">Снять</button>
+    </div>`;
+  } else {
+    html += `<div class="active-pet-bar"><div class="active-pet-emoji">🐾</div><div class="active-pet-info"><div class="active-pet-name">Нет питомца</div><div class="active-pet-bonus">Купи и активируй питомца</div></div></div>`;
+  }
+
+  html += '<div class="pets-grid">';
+  PETS.forEach(p => {
+    const isOwned = ownedPets.has(p.id);
+    const isActive = activePet === p.id;
+    const canAfford = coins >= p.cost;
+    let cls = `pet-card tier-${p.tier}`;
+    if (isOwned) cls += ' owned';
+    else if (!canAfford) cls += ' locked-pet';
+
+    html += `<div class="${cls}" onclick="${isOwned ? `activatePet('${p.id}')` : (canAfford ? `buyPet('${p.id}')` : '')}">
+      ${isOwned ? `<div class="pet-owned-badge">${isActive ? '✅ АКТИВ' : '✔ КУПЛЕН'}</div>` : ''}
+      <div class="pet-emoji">${p.emoji}</div>
+      <div class="pet-name">${p.name}</div>
+      <div class="pet-bonus">${p.desc} <span>(макс ×5)</span></div>
+      <div class="pet-cost">${isOwned ? (isActive ? '🟢 Активен' : '👆 Нажми активировать') : '☯️ ' + formatNum(p.cost)}</div>
+    </div>`;
+  });
+  html += '</div>';
+  sec.innerHTML = html;
+}
+
+function buyPet(id) {
+  const pet = PETS.find(p => p.id === id);
+  if (!pet || coins < pet.cost || ownedPets.has(id)) return;
+  coins -= pet.cost;
+  ownedPets.add(id);
+  activePet = id;
+  applyPetBonus();
+  updateUI(); saveGame(); savePets();
+  renderPets();
+}
+
+function activatePet(id) {
+  activePet = id;
+  applyPetBonus();
+  savePets(); renderPets(); updateUI();
+}
+
+function deactivatePet() {
+  activePet = null;
+  petTapMult = 1;
+  savePets(); renderPets(); updateUI();
+}
+
+let petTapMult = 1;
 
 // Show first quote
 showQuote();
